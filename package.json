@@ -15,7 +15,8 @@
     "build": "yarn clean:dist && yarn build:types && yarn build:code",
     "dev": "rollup -c -w",
     "lint": "eslint . --ext .js,.ts",
-    "release": "yarn build && npm publish --accecc public"
+    "release": "yarn build && npm publish --accecc public",
+    "postinstall": "husky install"
   },
   "files": [
     "dist"
@@ -34,6 +35,7 @@
     "firebase": "^8.2.7",
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
+    "pinst": "^2.1.4",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.39.0",
