@@ -6,6 +6,7 @@
   "main": "dist/osnova-webrtc-signal-firebase.cjs.js",
   "module": "dist/osnova-webrtc-signal-firebase.esm.js",
   "browser": "dist/osnova-webrtc-signal-firebase.umd.js",
+  "types": "dist/index.d.ts",
   "author": "Alexander Snov",
   "license": "MIT",
   "scripts": {
