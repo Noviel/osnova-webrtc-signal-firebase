@@ -15,7 +15,7 @@
     "build": "yarn clean:dist && yarn build:types && yarn build:code",
     "dev": "rollup -c -w",
     "lint": "eslint . --ext .js,.ts",
-    "release": "yarn build && npm publish --accecc public",
+    "release": "yarn build && npm publish --access public",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
