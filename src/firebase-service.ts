@@ -17,7 +17,15 @@ export interface FirebaseServiceOptions {
   analytics?: boolean;
 }
 
-export function initializeFirebase(config: FirebaseConfig, { analytics = true }: FirebaseServiceOptions = {}) {
+export type FirebaseService = {
+  app: firebase.app.App;
+  firebase: typeof firebase;
+};
+
+export function initializeFirebase(
+  config: FirebaseConfig,
+  { analytics = true }: FirebaseServiceOptions = {}
+): FirebaseService {
   const isApp = firebase.apps.length;
   const app = !isApp ? firebase.initializeApp(config) : firebase.app();
 

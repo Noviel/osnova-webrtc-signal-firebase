@@ -5,6 +5,13 @@ import pkg from './package.json';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
+const external = [
+  ...Object.keys(pkg.dependencies || {}),
+  ...Object.keys(pkg.peerDependencies || {}),
+  'firebase/app',
+  'firebase/firestore',
+];
+
 export default [
   {
     input: 'src/index.ts',
@@ -17,7 +24,7 @@ export default [
   },
   {
     input: 'src/index.ts',
-    external: ['firebase'],
+    external,
     output: [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'es' },
