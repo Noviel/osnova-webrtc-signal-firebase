@@ -13,7 +13,7 @@ export interface FirebaseConfig {
   measurementId: string;
 }
 
-export interface FirebaseServiceOptions {
+export interface FirebaseServiceOptions { 
   analytics?: boolean;
 }
 
