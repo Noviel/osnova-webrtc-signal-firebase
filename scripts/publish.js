@@ -1,3 +1,3 @@
-const { execSync } = require('child_process');
+const { spawn } = require('child_process');
 
-execSync('cd dist && npm publish', { stdio: 'pipe' });
+spawn('cd dist && npm publish', { stdio: 'inherit', shell: true });
