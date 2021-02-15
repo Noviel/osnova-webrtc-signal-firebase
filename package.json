@@ -1,6 +1,6 @@
 {
   "name": "@osnova/webrtc-signal-firebase",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "description": "WebRTC signaling with Firebase",
   "main": "dist/osnova-webrtc-signal-firebase.cjs.js",
@@ -16,8 +16,8 @@
     "build": "yarn clean:dist && yarn build:types && yarn build:code && node scripts/copy-pkg-json.js",
     "dev": "rollup -c -w",
     "lint": "eslint . --ext .js,.ts",
-    "np:publish": "np --no-cleanup",
-    "release": "yarn build && np:publish",
+    "npm:publish": "node scripts/publish.js",
+    "release": "yarn build && npm:publish",
     "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
