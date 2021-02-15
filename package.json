@@ -17,7 +17,7 @@
     "dev": "rollup -c -w",
     "lint": "eslint . --ext .js,.ts",
     "npm:publish": "node scripts/copy-pkg-json.js && node scripts/publish.js",
-    "release": "yarn build && npm:publish",
+    "release": "npm run build && npm run npm:publish",
     "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
