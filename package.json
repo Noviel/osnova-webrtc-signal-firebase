@@ -13,10 +13,11 @@
     "clean:dist": "yarn rimraf dist",
     "build:types": "tsc -p . --emitDeclarationOnly",
     "build:code": "rollup -c",
-    "build": "yarn clean:dist && yarn build:types && yarn build:code",
+    "build": "yarn clean:dist && yarn build:types && yarn build:code && node scripts/copy-pkg-json.js",
     "dev": "rollup -c -w",
     "lint": "eslint . --ext .js,.ts",
-    "release": "yarn build && np",
+    "np:publish": "np --no-cleanup",
+    "release": "yarn build && np:publish",
     "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"

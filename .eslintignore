@@ -4,3 +4,4 @@ dist
 .prettierrc.js
 .lintstagedrc.js
 rollup.config.js
+scripts/*
