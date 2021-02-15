@@ -5,7 +5,7 @@
   "description": "WebRTC signaling with Firebase",
   "main": "dist/osnova-webrtc-signal-firebase.cjs.js",
   "module": "dist/osnova-webrtc-signal-firebase.esm.js",
-  "browser": "dist/osnova-webrtc-signal-firebase.umd.js",
+  "browser": "dist/osnova-webrtc-signal-firebase.esm.js",
   "types": "dist/index.d.ts",
   "author": "Alexander Snov",
   "license": "MIT",

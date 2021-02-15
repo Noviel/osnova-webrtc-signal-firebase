@@ -13,7 +13,7 @@ const external = [
 ];
 
 export default [
-  {
+  /*   {
     input: 'src/index.ts',
     output: {
       name: 'webrtc-signal-firebase',
@@ -21,7 +21,7 @@ export default [
       format: 'umd',
     },
     plugins: [resolve({ extensions }), commonjs(), typescript()],
-  },
+  }, */
   {
     input: 'src/index.ts',
     external,
