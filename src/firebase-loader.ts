@@ -1,6 +1,6 @@
-import { FirebaseConfig, FirebaseServiceOptions } from './firebase-service';
+import { FirebaseConfig, FirebaseService, FirebaseServiceOptions } from './firebase-service';
 
-export async function loadFirebase(config: FirebaseConfig, options: FirebaseServiceOptions) {
+export async function loadFirebase(config: FirebaseConfig, options: FirebaseServiceOptions): Promise<FirebaseService> {
   const { initializeFirebase } = await import('./firebase-service');
 
   const servicesPromises: Promise<unknown>[] = [];
@@ -17,5 +17,5 @@ export async function loadFirebase(config: FirebaseConfig, options: FirebaseServ
 
   await Promise.all(servicesPromises);
 
-  initializeFirebase(config, options);
+  return initializeFirebase(config, options);
 }
