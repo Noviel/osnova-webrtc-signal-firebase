@@ -28,8 +28,8 @@ export default [
     input: 'src/index.ts',
     external,
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
+      { file: pkg.main, format: 'cjs', inlineDynamicImports: true },
+      { file: pkg.module, format: 'es', inlineDynamicImports: true },
     ],
     plugins: [resolve({ extensions }), typescript()],
   },
