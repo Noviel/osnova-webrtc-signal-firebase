@@ -10,6 +10,8 @@ const external = [
   ...Object.keys(pkg.peerDependencies || {}),
   'firebase/app',
   'firebase/firestore',
+  'firebase/auth',
+  'firebase/analytics',
 ];
 
 export default [
