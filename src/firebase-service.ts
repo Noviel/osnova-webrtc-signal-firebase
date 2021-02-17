@@ -1,7 +1,5 @@
 import firebase from 'firebase/app';
 
-import 'firebase/firestore';
-
 export interface FirebaseConfig {
   apiKey: string;
   projectId: string;
@@ -15,6 +13,8 @@ export interface FirebaseConfig {
 
 export interface FirebaseServiceOptions {
   analytics?: boolean;
+  firestore?: boolean;
+  auth?: boolean;
 }
 
 export type FirebaseService = {
