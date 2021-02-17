@@ -1,6 +1,6 @@
 {
   "name": "@osnova/webrtc-signal-firebase",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": false,
   "description": "WebRTC signaling with Firebase",
   "main": "dist/osnova-webrtc-signal-firebase.cjs.js",
